@@ -1,0 +1,61 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+
+.mat-elevation-z6 {
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)
+}
+
+
+//only for mobile
+@media (max-width: 360px) {
+    .MyCustomFont{
+        font-size: 11px;
+    }
+}
+
+
+//only for Laptop (Middle)
+@media (min-width: 800px) and (max-width: 1280px) {
+    .MyCustomFont{
+        font-size: 12px;
+    }
+}
+
+
+//only for Laptop (Middle)
+@media (min-width: 1281px) and(max-width: 1400px) {
+    .MyCustomFont{
+        font-size: 11px;
+        padding-bottom: 10px;
+    }
+}
+
+
+//only for Laptop (Middle)
+@media (min-width: 1401px) and(max-width: 1550px) {
+    .MyCustomFont{
+        font-size: 13px;
+    }
+}
+
+
+//only for Laptop Big Screen
+@media (min-width: 1551px) and ( max-width: 2550px) {
+    .MyCustomFont{
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+

@@ -14,42 +14,139 @@
 
 
 //only for mobile
-@media (max-width: 360px) {
+@media (min-width: 10px) and (max-width: 360px) {
     .MyCustomFont{
-        font-size: 11px;
+        font-size: 10px;
+        padding-bottom: 8px;
+    }
+
+    .myImage{
+        max-width:100%; 
+        max-height:100%; 
+        padding: 10px; 
+        text-align: center; 
+        background-color: #fff; 
+        object-fit: cover;
     }
 }
 
+
+//only for Laptop (Middle)
+@media (min-width: 361px) and (max-width: 1279px) {
+    .MyCustomFont{
+        font-size: 11px;
+        padding-bottom: 8px;
+    }
+
+    .myImage{
+        max-width:100%; 
+        max-height:100%; 
+        padding: 10px; 
+        text-align: center; 
+        background-color: #fff; 
+        object-fit: cover;
+    }
+
+    .minHeight{
+
+        min-height: 400px;
+    }
+}
 
 //only for Laptop (Middle)
 @media (min-width: 800px) and (max-width: 1280px) {
     .MyCustomFont{
         font-size: 12px;
     }
+
+    .myImage{
+        max-width:100%; 
+        max-height:100%; 
+        padding: 10px; 
+        text-align: center; 
+        background-color: #fff; 
+        object-fit: cover;
+    }
+    .minHeight{
+
+        min-height: 400px;
+    }
+    
 }
 
 
-//only for Laptop (Middle)
+//only for Laptop (Middle) (SUMON VAI/ My OFFICE LAPTOP)
 @media (min-width: 1281px) and(max-width: 1400px) {
     .MyCustomFont{
-        font-size: 11px;
-        padding-bottom: 10px;
+        font-size: 10px;
+        padding-bottom: 5px;
+    }
+
+    .myImage{
+        max-width:100%; 
+        max-height:100%; 
+        padding: 10px; 
+        text-align: center; 
+        background-color: #fff; 
+        object-fit: cover;
+    }
+
+    .minHeight{
+
+        min-height: 410px;
     }
 }
 
 
-//only for Laptop (Middle)
+//only for Laptop ((MY HOME))
 @media (min-width: 1401px) and(max-width: 1550px) {
     .MyCustomFont{
-        font-size: 13px;
+        font-size: 12px;
+        padding-bottom: 8px;
+    }
+
+
+    .myImage{
+        max-width:100%; 
+        max-height:100%; 
+        padding: 10px; 
+        text-align: center; 
+        background-color: #fff; 
+        object-fit: cover;
+    }
+
+
+    .minHeight{
+
+        min-height: 460px;
     }
 }
 
 
-//only for Laptop Big Screen
-@media (min-width: 1551px) and ( max-width: 2550px) {
+//only for Laptop Big Screen (MY OFFICE)
+@media (min-width: 1551px) and ( max-width: 3100px) {
     .MyCustomFont{
-        font-size: 14px;
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+
+    .myImage{
+       // width: 420px; 
+        max-width: 100%;
+        max-height: 100%; 
+        padding: 10px; 
+        text-align: center; 
+        background-color: #fff; 
+        left: 0; 
+        right: 0; 
+        margin: auto;
+        
+    }
+
+
+    .minHeight{
+
+        min-height: 580px;
     }
 }
 

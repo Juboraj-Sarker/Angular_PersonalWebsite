@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
-import { MouseEvent } from '@agm/core';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-contact',
@@ -9,61 +10,18 @@ import { MouseEvent } from '@agm/core';
 })
 export class ContactComponent implements OnInit {
   title = 'app';
-  topics = ['Angular', 'React', 'Vue'];
+
  // userModel = new User('Rob', 'rob@test.com', 5556665566, 'default', 'morning', true);
-  userModel = new User('', '', '', '', 'default', 'morning', true);
-  topicHasError = true;
-  submitted = false;
-  errorMsg = '';
+  public userModel = new User('', '', '', '', 'default', 'morning', true);
+  public topicHasError = true;
+  public submitted = false;
+  public errorMsg = '';
 
 
 
-  zoom: number = 8;
-  
-  // initial center position for the map
-  lat: number = 23.873751;
-  lng: number = 90.396454;
+  constructor(private toastr: ToastrService) { 
 
-  clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
   }
-  
-  mapClicked($event: MouseEvent) {
-    this.markers.push({
-      lat: $event.coords.lat,
-      lng: $event.coords.lng,
-      draggable: true
-    });
-  }
-  
-  markerDragEnd(m: marker, $event: MouseEvent) {
-    console.log('dragEnd', m, $event);
-  }
-  
-  markers: marker[] = [
-	  {
-		  lat: 23.873751,
-		  lng: 90.396454,
-		  label: 'Uttara',
-		  draggable: true
-    }
-    // ,
-	  // {
-		//   lat: 23.875843,
-		//   lng: 90.399257,
-		//   label: 'B',
-		//   draggable: true
-	  // },
-	  // {
-		//   lat: 23.878634,
-		//   lng: 90.399357,
-		//   label: 'C',
-		//   draggable: true
-	  // }
-  ]
-
-
-  constructor() { }
 
   
 
@@ -72,23 +30,13 @@ export class ContactComponent implements OnInit {
 
 
 
-  // validateTopic(value) {
-  //   if (value === 'default') {
-  //     this.topicHasError = true;
-  //   } else {
-  //     this.topicHasError = false;
-  //   }
-  // }
 
-  onSubmit() {
-    
+  onSubmit(form) {
+    this.toastr.success('Your message sent successfully !', 'SUCCESS !!!');
+    form.reset();
+
   }
 
 }
 
-interface marker {
-	lat: number;
-	lng: number;
-	label?: string;
-	draggable: boolean;
-}
+

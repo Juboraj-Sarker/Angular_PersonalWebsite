@@ -43,12 +43,14 @@ import { ChartsModule } from 'ng2-charts';
 import { HomeComponent } from './views/personal/home/home.component';
 import { AboutComponent } from './views/personal/about/about.component';
 import { AwardComponent } from './views/personal/award/award.component';
-import { ContactComponent } from './views/personal/contact/contact.component';
 import { ExperienceComponent } from './views/personal/experience/experience.component';
 import { SkillComponent } from './views/personal/skill/skill.component';
 import { ProjectComponent } from './views/personal/project/project.component';
 import { EducationComponent } from './views/personal/education/education.component';
 import { CertificationComponent } from './views/personal/certification/certification.component';
+import { ContactComponent } from './views/personal/contact/contact.component';
+
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -64,7 +66,8 @@ import { CertificationComponent } from './views/personal/certification/certifica
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    ToastrModule.forRoot()
   ],
   declarations: [
     AppComponent,
